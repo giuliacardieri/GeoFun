@@ -1,0 +1,61 @@
+.button {
+  align-items: center;
+  border-radius: 1em;
+  box-shadow: 4px 4px 0px var(--color-black);
+  cursor: pointer;
+  display: flex;
+  font-family: inherit;
+  font-size: var(--main-font-size);
+  gap: 4px;
+  line-height: 1;
+  padding: 4px;
+  position: relative;
+  min-height: 48px;
+  min-width: 96px;
+}
+
+.button[data-is-map="false"] .text {
+  left: 12px;
+}
+
+.text {
+  left: 45px;
+  position: absolute;
+  transition: left ease-in-out 300ms;
+}
+
+.button[data-is-map="false"] .icon {
+  animation: rotateIcon linear 300ms;
+  right: 4px;
+}
+
+.icon {
+  animation: rotateIconReverse linear 300ms;
+  background-color: var(--color-black);
+  border-radius: 100%;
+  color: var(--color-white);
+  font-size: 1.25rem;
+  right: 52px;
+  padding: 8px;
+  position: absolute;
+  transition: right ease-in-out 300ms;
+  z-index: 2;
+}
+
+@keyframes rotateIconReverse {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  }
+}
+
+@keyframes rotateIcon {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}

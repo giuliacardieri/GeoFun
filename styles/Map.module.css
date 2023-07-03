@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  height: calc(100vh - var(--header-height));
+  justify-content: center;
+}
+
+.map {
+  box-sizing: border-box;
+  height: auto;
+  padding: 0 16px;
+}
+
+.map path:hover {
+  fill: var(--color-black);
+}

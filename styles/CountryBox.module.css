@@ -1,0 +1,40 @@
+.wrapper {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-black);
+  border-radius: 10px;
+  bottom: 16px;
+  box-shadow: 4px 4px 0 var(--color-black);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  left: 16px;
+  min-height: 120px;
+  min-width: 220px;
+  padding: 8px;
+  position: absolute;
+}
+
+.textWrapper {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.flag {
+  border: 2px solid var(--color-black);
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.h2 {
+  font-size: var(--h3-font-size);
+}
+
+.link {
+  font-size: var(--main-font-size);
+  margin-top: auto;
+}
+
+.icon {
+  margin-left: 4px;
+}
