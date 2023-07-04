@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import MapStyles from "@/styles/Map.module.css";
 import CountryBox from "@/components/countrybox";
+import MapStyles from "@/styles/Map.module.css";
 
 export default function Map() {
   const [id, setId] = useState("");

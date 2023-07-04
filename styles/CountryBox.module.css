@@ -26,10 +26,6 @@
   object-fit: cover;
 }
 
-.h2 {
-  font-size: var(--h3-font-size);
-}
-
 .link {
   font-size: var(--main-font-size);
   margin-top: auto;

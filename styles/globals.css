@@ -3,9 +3,9 @@
 
   --logo-font-size: 3rem;
   --h1-font-size: 6rem;
-  --h2-font-size: 3rem;
-  --h3-font-size: 2rem;
-  --main-font-size: 1.5rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.5rem;
+  --main-font-size: 1.25rem;
 
   --color-black: #222;
   --color-white: #fff;
@@ -33,16 +33,19 @@ body {
 
 h1 {
   font-size: var(--h1-font-size);
+  line-height: 1;
   margin: 0;
 }
 
 h2 {
   font-size: var(--h2-font-size);
+  line-height: 1;
   margin: 0;
 }
 
 h3 {
   font-size: var(--h3-font-size);
+  line-height: 1;
   margin: 0;
 }
 
