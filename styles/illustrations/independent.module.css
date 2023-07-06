@@ -1,0 +1,64 @@
+.independent {
+  height: 72px;
+  position: relative;
+  overflow: hidden;
+  width: 96px;
+}
+
+.independent:before {
+  background-color: var(--color-green);
+  border-radius: 100%;
+  bottom: -12px;
+  content: "";
+  height: 24px;
+  position: absolute;
+  width: 100%;
+}
+
+.independent:after {
+  background-color: var(--color-black);
+  border-radius: 100%;
+  bottom: 10px;
+  content: "";
+  height: 42px;
+  left: 42px;
+  position: absolute;
+  width: 2px;
+}
+
+.independent__flag {
+  background-color: var(--color-orange-lighter);
+  border-radius: 2px;
+  bottom: 36px;
+  height: 16px;
+  left: 12px;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  transform: skew(2deg);
+  width: 24px;
+}
+
+.independent__flag:before {
+  background-color: var(--color-white);
+  border-radius: 100% 100% 0 0;
+  content: "";
+  height: 10px;
+  left: 7px;
+  position: absolute;
+  top: 3px;
+  transform: rotate(-45deg);
+  width: 6px;
+}
+
+.independent__flag:after {
+  background-color: var(--color-white);
+  border-radius: 100% 100% 0 0;
+  content: "";
+  height: 10px;
+  right: 7px;
+  position: absolute;
+  top: 3px;
+  transform: rotate(45deg);
+  width: 6px;
+}

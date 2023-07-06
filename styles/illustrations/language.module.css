@@ -1,0 +1,47 @@
+.language {
+  height: 72px;
+  position: relative;
+  width: 96px;
+}
+
+.language__bubble {
+  background-color: var(--language-color, var(--color-yellow));
+  border-radius: 100%;
+  font-size: 1.15rem;
+  left: 0;
+  line-height: 0.8;
+  padding: 9px 7px 5px;
+  position: absolute;
+  top: 0px;
+}
+
+.language__bubble:nth-child(3) {
+  left: unset;
+  right: 0;
+  --language-color: var(--color-red);
+}
+
+.language__bubble:nth-child(5) {
+  bottom: 0;
+  left: 0;
+  top: unset;
+  --language-color: var(--color-green);
+}
+
+.language__bubble:nth-child(4) {
+  bottom: 0;
+  left: unset;
+  right: 0;
+  top: unset;
+  --language-color: var(--color-orange-darker);
+}
+
+.language__bubble:nth-child(2) {
+  bottom: 0;
+  height: min-content;
+  left: 0;
+  margin: auto;
+  right: 0;
+  width: min-content;
+  --language-color: var(--color-blue);
+}

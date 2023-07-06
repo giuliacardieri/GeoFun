@@ -1,0 +1,141 @@
+.map {
+  height: 72px;
+  position: relative;
+  overflow: hidden;
+  width: 96px;
+}
+
+.map:after {
+  background-color: var(--color-black);
+  content: "";
+  display: block;
+  height: 60px;
+  left: 32px;
+  opacity: 0.2;
+  position: absolute;
+  top: 2px;
+  width: 2px;
+}
+
+.map:before {
+  background-color: var(--color-black);
+  content: "";
+  display: block;
+  height: 62px;
+  right: 32px;
+  opacity: 0.2;
+  position: absolute;
+  top: 6px;
+  width: 2px;
+  z-index: 1;
+}
+
+.map__ret1 {
+  background: linear-gradient(
+    160deg,
+    var(--color-orange-darker) 58%,
+    var(--color-black) 56%
+  );
+  border: 2px solid var(--color-black);
+  border-width: 2px 0 2px 2px;
+  height: 60px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 4px;
+  transform: skewY(-8deg);
+  width: 32px;
+}
+
+.map__ret1:after {
+  border-bottom: 32px solid var(--color-black);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-radius: 0 20% 0 0;
+  bottom: -4px;
+  content: "";
+  display: block;
+  height: 0;
+  position: absolute;
+  right: -4px;
+  transform: rotate(15deg);
+  width: 0;
+}
+
+.map__ret2 {
+  background-color: var(--color-green);
+  border: 2px solid var(--color-black);
+  border-width: 2px 0 2px 0px;
+  height: 60px;
+  left: 3px;
+  margin: auto;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 4px;
+  transform: skewY(8deg);
+  width: 32px;
+}
+
+.map__ret2:before {
+  background-color: var(--color-black);
+  border-radius: 0 20% 0 0;
+  bottom: -3px;
+  content: "";
+  display: block;
+  height: 30px;
+  left: -8px;
+  position: absolute;
+  transform: rotate(10deg);
+  width: 20px;
+}
+
+.map__ret2:after {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 40px solid var(--color-orange-darker);
+  border-radius: 0 20% 0 0;
+  content: "";
+  display: block;
+  height: 0;
+  position: absolute;
+  left: -4px;
+  top: -8px;
+  transform: rotate(10deg);
+  width: 0;
+}
+
+.map__ret3 {
+  background-color: var(--color-blue-dark);
+  border: 2px solid var(--color-black);
+  border-width: 2px 2px 2px 0;
+  height: 60px;
+  position: absolute;
+  right: 0;
+  top: 4px;
+  transform: skewY(-8deg);
+  width: 32px;
+}
+
+.map__ret3:before {
+  background-color: var(--color-yellow);
+  border-radius: 0 20% 90% 0;
+  content: "";
+  display: block;
+  height: 60px;
+  position: absolute;
+  width: 20px;
+}
+
+.map__ret3:after {
+  background-color: var(--color-yellow);
+  border-radius: 20%;
+  content: "";
+  display: block;
+  height: 30px;
+  left: -6px;
+  position: absolute;
+  top: 16px;
+  transform: rotate(-20deg);
+  width: 14px;
+}

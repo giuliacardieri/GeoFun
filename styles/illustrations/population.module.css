@@ -1,0 +1,83 @@
+.population {
+  align-items: center;
+  display: flex;
+  height: 72px;
+  justify-content: space-between;
+  position: relative;
+  width: 96px;
+}
+
+.person {
+  background-color: var(--person-color, var(--color-yellow));
+  border-radius: 100%;
+  height: 16px;
+  position: relative;
+  width: 16px;
+}
+
+.person:nth-child(2) {
+  --person-color: var(--color-green);
+}
+
+.person:nth-child(3) {
+  --person-color: var(--color-blue);
+}
+
+.person:nth-child(4) {
+  --person-color: var(--color-red);
+}
+
+.person:nth-child(5) {
+  --person-color: var(--color-orange-lighter);
+}
+
+.person:after {
+  background-color: var(--person-color, var(--color-yellow));
+  bottom: -20px;
+  content: "";
+  height: 20px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  width: 4px;
+}
+
+.person:before {
+  background-color: var(--person-color, var(--color-yellow));
+  bottom: -8px;
+  content: "";
+  height: 4px;
+  left: -2px;
+  position: absolute;
+  width: 20px;
+}
+
+.person__legs {
+  bottom: -28px;
+  height: 16px;
+  position: absolute;
+  width: 4px;
+}
+
+.person__legs:before {
+  background-color: var(--person-color, var(--color-yellow));
+  bottom: 0px;
+  content: "";
+  height: 16px;
+  left: 2px;
+  position: absolute;
+  transform: rotate(45deg);
+  width: 4px;
+}
+
+.person__legs:after {
+  background-color: var(--person-color, var(--color-yellow));
+  bottom: 0px;
+  content: "";
+  height: 16px;
+  right: -10px;
+  position: absolute;
+  transform: rotate(-45deg);
+  width: 4px;
+}

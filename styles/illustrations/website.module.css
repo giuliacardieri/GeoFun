@@ -1,0 +1,16 @@
+.website {
+  background-color: var(--color-green-blue-dark);
+  border: 2px solid var(--color-black);
+  border-radius: 10%;
+  height: 64px;
+  position: relative;
+  width: 96px;
+}
+
+.website__top {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10% 10% 0 0;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 1rem;
+  padding: 2px 4px;
+}

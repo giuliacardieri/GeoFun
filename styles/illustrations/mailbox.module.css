@@ -1,0 +1,42 @@
+.box {
+  background-color: var(--color-orange);
+  border-radius: 0 15% 0 0;
+  height: 36px;
+  margin: 16px 0 0 19px;
+  position: relative;
+  width: 64px;
+  transform: skew(-4deg);
+}
+
+.box:after {
+  background-color: var(--color-orange-darker);
+  border-radius: 15% 15% 0 0;
+  box-shadow: 0;
+  content: "";
+  display: block;
+  height: 36px;
+  margin-left: -19px;
+  position: relative;
+  width: 22px;
+}
+
+.flag {
+  background-color: var(--color-red);
+  height: 35px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: -16px;
+  width: 4px;
+  transform: skew(-7deg);
+}
+
+.flag:after {
+  background-color: var(--color-red);
+  border-radius: 15%;
+  content: "";
+  height: 10px;
+  position: absolute;
+  width: 16px;
+}

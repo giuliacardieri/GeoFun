@@ -1,0 +1,42 @@
+.carside {
+  background-color: var(--color-blue-dark);
+  border-radius: 10px;
+  display: block;
+  height: 72px;
+  position: relative;
+  width: 72px;
+}
+
+.carside:after {
+  border-left: 2px dashed var(--color-white);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  width: 2px;
+}
+
+.carside__arrowUp {
+  background-color: var(--color-white);
+  height: 40%;
+  position: absolute;
+  right: 17px;
+  top: 30%;
+  width: 2px;
+}
+
+.carside__arrowUp:after {
+  border-bottom: 8px solid var(--color-white);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  content: "";
+  display: block;
+  height: 0;
+  left: -5px;
+  position: absolute;
+  top: -1px;
+  width: 0;
+}

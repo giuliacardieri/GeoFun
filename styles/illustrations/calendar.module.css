@@ -1,0 +1,55 @@
+.calendar {
+  background: linear-gradient(
+    -30deg,
+    rgba(77, 144, 142, 0.15) 49%,
+    var(--color-white) 50%
+  );
+  border: 2px solid var(--color-green-blue-dark);
+  border-width: 12px 2px 2px 2px;
+  border-radius: 10px;
+  color: var(--color-green-blue-dark);
+  height: 54px;
+  position: relative;
+  width: 96px;
+}
+
+.calendar:after {
+  background-color: var(--color-green-blue-dark);
+  border-radius: 4px;
+  content: "";
+  display: block;
+  height: 10px;
+  left: 16px;
+  position: absolute;
+  top: -18px;
+  width: 8px;
+}
+
+.calendar:before {
+  background-color: var(--color-green-blue-dark);
+  border-radius: 4px;
+  content: "";
+  display: block;
+  height: 10px;
+  position: absolute;
+  right: 16px;
+  top: -18px;
+  width: 8px;
+}
+
+.calendar__day {
+  font-size: 16px;
+  line-height: 16px;
+  position: relative;
+  text-align: center;
+  top: 8px;
+}
+
+.calendar__number {
+  bottom: 0px;
+  font-size: 30px;
+  line-height: 26px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}

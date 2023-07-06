@@ -21,10 +21,11 @@
   --color-blue: #277da1;
 
   --header-height: 64px;
+
+  --border-radius: 10px;
 }
 
 body {
-  background-color: var(--color-blue-dark);
   color: var(--color-black);
   font-family: var(--font-family);
   margin: 0;

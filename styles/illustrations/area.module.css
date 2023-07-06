@@ -1,0 +1,59 @@
+.ruler {
+  background-color: var(--color-red);
+  border-radius: 10px;
+  height: 32px;
+  position: relative;
+  width: 96px;
+}
+
+.ruler:after {
+  background: linear-gradient(
+    90deg,
+    transparent 4px,
+    rgba(0, 0, 0, 0.5) 5px,
+    transparent 7px,
+    transparent 24px,
+    rgba(0, 0, 0, 0.5) 25px,
+    transparent 27px,
+    transparent 44px,
+    rgba(0, 0, 0, 0.5) 45px,
+    transparent 47px,
+    transparent 64px,
+    rgba(0, 0, 0, 0.5) 65px,
+    transparent 67px,
+    transparent 84px,
+    rgba(0, 0, 0, 0.5) 85px,
+    transparent 87px
+  );
+  border-radius: 10px;
+  content: "";
+  height: 40%;
+  left: 2px;
+  position: absolute;
+  top: 1px;
+  width: calc(100% - 4px);
+}
+
+.ruler:before {
+  background: linear-gradient(
+    90deg,
+    transparent 14px,
+    rgba(0, 0, 0, 0.5) 15px,
+    transparent 17px,
+    transparent 34px,
+    rgba(0, 0, 0, 0.5) 35px,
+    transparent 37px,
+    transparent 54px,
+    rgba(0, 0, 0, 0.5) 55px,
+    transparent 57px,
+    transparent 74px,
+    rgba(0, 0, 0, 0.5) 75px,
+    transparent 77px
+  );
+  border-radius: 10px;
+  content: "";
+  height: 30%;
+  left: 2px;
+  position: absolute;
+  width: calc(100% - 4px);
+}

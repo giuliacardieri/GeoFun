@@ -1,0 +1,128 @@
+.person {
+  height: 72px;
+  margin: 0 0 -23px 11px;
+  position: relative;
+  width: 96px;
+}
+
+.head {
+  background-color: var(--color-yellow);
+  border-radius: 100%;
+  height: 50px;
+  position: absolute;
+  width: 50px;
+}
+
+.eyes:after {
+  background-color: var(--color-black);
+  border-radius: 100%;
+  content: "";
+  height: 8px;
+  left: 14px;
+  position: absolute;
+  top: 18px;
+  width: 6px;
+}
+
+.eyes:before {
+  background-color: var(--color-black);
+  border-radius: 100%;
+  content: "";
+  height: 8px;
+  position: absolute;
+  right: 14px;
+  top: 18px;
+  width: 6px;
+}
+
+.mouth {
+  border-bottom: 2px solid var(--color-red);
+  border-radius: 100%;
+  bottom: 12px;
+  height: 10px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  width: 20px;
+}
+
+.hair {
+  border-top: 12px solid var(--color-orange-darker);
+  border-radius: 100% 100% 0 0;
+  height: 32px;
+  left: -3px;
+  position: absolute;
+  top: -8px;
+  width: 56px;
+}
+
+.hair:after {
+  background-color: var(--color-orange-darker);
+  border-radius: 40%;
+  content: "";
+  height: 12px;
+  left: 6px;
+  position: absolute;
+  top: -4px;
+  transform: rotate(-30deg);
+  width: 24px;
+}
+
+.hair:before {
+  background-color: var(--color-orange-darker);
+  border-radius: 40%;
+  content: "";
+  height: 12px;
+  position: absolute;
+  right: 6px;
+  top: -4px;
+  transform: rotate(30deg);
+  width: 24px;
+}
+
+.hair__left {
+  background-color: var(--color-orange-darker);
+  border-radius: 40% 0 40% 0;
+  height: 40px;
+  left: -2px;
+  position: absolute;
+  top: 2px;
+  transform: skew(-3deg);
+  width: 12px;
+}
+
+.hair__left:before {
+  background-color: var(--color-orange-darker);
+  border-radius: 40%;
+  bottom: -8px;
+  content: "";
+  height: 24px;
+  left: -4px;
+  position: absolute;
+  transform: rotate(4deg) skew(-5deg);
+  width: 16px;
+}
+
+.hair__right {
+  background-color: var(--color-orange-darker);
+  border-radius: 0 40% 0 40%;
+  height: 40px;
+  position: absolute;
+  right: -2px;
+  top: 2px;
+  transform: skew(3deg);
+  width: 12px;
+}
+
+.hair__right:before {
+  background-color: var(--color-orange-darker);
+  border-radius: 40%;
+  bottom: -8px;
+  content: "";
+  height: 24px;
+  position: absolute;
+  right: -4px;
+  transform: rotate(-4deg) skew(5deg);
+  width: 16px;
+}
