@@ -75,7 +75,7 @@ export default function Countries() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {isLoading && <Loader></Loader>}
+      {isLoading && <Loader fullScreen></Loader>}
       <Button
         onClick={navigateBack}
         ariaLabel="Go back to home page"
@@ -137,7 +137,8 @@ export default function Countries() {
             </li>
           </ul>
         </section>
-        <section>
+        <section className={countryPage.country__iframeGroup}>
+          <Loader className={countryPage.country__loader}></Loader>
           <iframe
             className={countryPage.country__map}
             width="450"
@@ -216,7 +217,8 @@ export default function Countries() {
             </li>
           </ul>
         </section>
-        <section>
+        <section className={countryPage.country__iframeGroup}>
+          <Loader className={countryPage.country__loader}></Loader>
           <iframe
             className={countryPage.country__map}
             width="450"

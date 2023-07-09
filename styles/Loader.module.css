@@ -2,8 +2,21 @@
   align-items: center;
   background-color: rgba(0, 0, 0, 0.75);
   display: flex;
-  height: 100vh;
+  height: 100%;
+  left: 0;
   justify-content: center;
   position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.loader--fullScreen {
+  height: 100vh;
+  position: fixed;
   width: 100vw;
+  z-index: 3;
+}
+
+.loader:not(.loader--fullScreen) {
+  border-radius: var(--border-radius);
 }

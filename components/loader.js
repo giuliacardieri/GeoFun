@@ -4,7 +4,13 @@ import Globe from ".//illustrations/globe";
 
 export default function Loader(props) {
   return (
-    <aside className={LoaderStyles.loader}>
+    <aside
+      className={
+        props.fullScreen
+          ? `${LoaderStyles.loader} ${LoaderStyles["loader--fullScreen"]}`
+          : LoaderStyles.loader
+      }
+    >
       <Globe></Globe>
     </aside>
   );

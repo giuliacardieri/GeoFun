@@ -46,15 +46,6 @@
   list-style: none;
 }
 
-.country__map {
-  background-color: var(--color-gray);
-  border: 2px solid var(--color-black);
-  border-radius: 10px;
-  height: 360px;
-  margin-bottom: 48px;
-  width: 100%;
-}
-
 .country__factsGroup {
   box-sizing: border-box;
   display: grid;
@@ -80,4 +71,21 @@
   height: 72px;
   margin-bottom: 0.4em;
   width: 96px;
+}
+
+.country__iframeGroup {
+  border-radius: var(--border-radius);
+  height: 360px;
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.country__map {
+  border: 2px solid var(--color-black);
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  z-index: 2;
 }

@@ -8,7 +8,8 @@ import Link from "next/link";
 import Map from "@/components/map";
 import List from "@/components/list";
 import ToggleButton from "@/components/togglebutton";
-import Loader from "@/components/loader";
+
+import { useIsMapContext } from "../context/isMap";
 
 export const getStaticProps = async () => {
   const res = await fetch(
@@ -20,7 +21,7 @@ export const getStaticProps = async () => {
 };
 
 export default function Home({ countries }) {
-  const [isMap, setIsMap] = useState(true);
+  const [isMap, setIsMap] = useIsMapContext(true);
 
   function toggleMap() {
     setIsMap(!isMap);
