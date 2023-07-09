@@ -1,0 +1,75 @@
+.globe {
+  animation: rotateEarth 1.5s linear infinite;
+  background-color: var(--color-blue);
+  border-radius: 100%;
+  box-shadow: -4px -4px 0px inset rgba(0, 0, 0, 0.1);
+  height: 64px;
+  position: absolute;
+  width: 64px;
+}
+
+@keyframes rotateEarth {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.globe__land {
+  background-color: var(--color-green);
+  border-radius: 80%;
+  height: 33px;
+  left: 4px;
+  position: absolute;
+  top: 23px;
+  transform: skew(20deg);
+  width: 24px;
+}
+
+.globe__land:after {
+  background-color: var(--color-green);
+  border-radius: 90%;
+  content: "";
+  height: 16px;
+  left: 42px;
+  position: absolute;
+  top: -16px;
+  transform: skew(10deg);
+  width: 14px;
+}
+
+.globe__face {
+  border-bottom: 2px solid var(--color-black);
+  border-radius: 40%;
+  bottom: 20px;
+  height: 16px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  width: 24px;
+}
+
+.globe__face:after {
+  background-color: var(--color-black);
+  border-radius: 100%;
+  content: "";
+  height: 8px;
+  left: 0px;
+  position: absolute;
+  top: -4px;
+  width: 6px;
+}
+
+.globe__face:before {
+  background-color: var(--color-black);
+  border-radius: 100%;
+  content: "";
+  height: 8px;
+  right: 0px;
+  position: absolute;
+  top: -4px;
+  width: 6px;
+}

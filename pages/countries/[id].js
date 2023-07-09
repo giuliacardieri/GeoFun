@@ -2,11 +2,14 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useActiveCountryContext } from "../../context/activeCountry";
+
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import countryPage from "@/styles/CountryPage.module.css";
 
-import BackButton from "@/components/backbutton";
+import Button from "@/components/button";
+import Loader from "@/components/loader";
 import Area from "@/components/illustrations/area";
 import Currency from "@/components/illustrations/currency";
 import CapitalCity from "@/components/illustrations/capitalcity";
@@ -25,6 +28,7 @@ import Website from "@/components/illustrations/website";
 
 export default function Countries() {
   const [activeCountry, setActiveCountry] = useActiveCountryContext(null);
+  const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
 
   function getValues(obj, isCurrency = false) {
@@ -55,6 +59,7 @@ export default function Countries() {
     )
       .then((res) => res.json())
       .then((data) => {
+        setIsLoading(false);
         setActiveCountry(data[0]);
       });
   });
@@ -70,7 +75,14 @@ export default function Countries() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <BackButton navigateBack={navigateBack}></BackButton>
+      {isLoading && <Loader></Loader>}
+      <Button
+        onClick={navigateBack}
+        ariaLabel="Go back to home page"
+        icon={faArrowLeft}
+      >
+        Go back
+      </Button>
       <main className={countryPage.country}>
         <header className={countryPage.country__header}>
           <Image
@@ -86,20 +98,6 @@ export default function Countries() {
           </div>
         </header>
         <section>
-          <iframe
-            className={countryPage.country__map}
-            width="450"
-            height="250"
-            frameborder="0"
-            referrerpolicy="no-referrer-when-downgrade"
-            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}&q=${activeCountry?.name?.common}&zoom=4`}
-            allowfullscreen
-          ></iframe>
-        </section>
-        <section>
-          <h2 className={countryPage.country__h2}>
-            {activeCountry?.flag} Information
-          </h2>
           <ul className={countryPage.country__infoGroup}>
             <li className={countryPage.country__info}>
               <div className={countryPage.country__drawing}>
@@ -146,7 +144,7 @@ export default function Countries() {
             height="250"
             frameborder="0"
             referrerpolicy="no-referrer-when-downgrade"
-            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}&q=${activeCountry?.capital?.[0]}&zoom=12&maptype=satellite`}
+            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}&q=${activeCountry?.name?.common}&zoom=4`}
             allowfullscreen
           ></iframe>
         </section>
@@ -218,20 +216,17 @@ export default function Countries() {
             </li>
           </ul>
         </section>
-        {/* <section className={countryPage.country__photos}>
-          <Image
-            src={`https://source.unsplash.com/random/?${activeCountry?.capital?.[0]}`}
-            alt={`Photo from from ${activeCountry?.capital?.[0]}, ${activeCountry?.name.common}`}
-            width={700}
-            height={240}
-          />
-          <Image
-            src={`https://source.unsplash.com/random/?${activeCountry?.name.common}`}
-            alt={`Photo from ${activeCountry?.name.common}`}
-            width={700}
-            height={240}
-          />
-        </section> */}
+        <section>
+          <iframe
+            className={countryPage.country__map}
+            width="450"
+            height="250"
+            frameborder="0"
+            referrerpolicy="no-referrer-when-downgrade"
+            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}&q=${activeCountry?.capital?.[0]}&zoom=12&maptype=satellite`}
+            allowfullscreen
+          ></iframe>
+        </section>
       </main>
     </>
   );

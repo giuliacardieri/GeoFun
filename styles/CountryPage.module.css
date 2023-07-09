@@ -47,6 +47,7 @@
 }
 
 .country__map {
+  background-color: var(--color-gray);
   border: 2px solid var(--color-black);
   border-radius: 10px;
   height: 360px;
@@ -79,9 +80,4 @@
   height: 72px;
   margin-bottom: 0.4em;
   width: 96px;
-}
-
-.country__photos {
-  display: flex;
-  gap: 24px;
 }

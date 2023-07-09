@@ -8,6 +8,7 @@ import Link from "next/link";
 import Map from "@/components/map";
 import List from "@/components/list";
 import ToggleButton from "@/components/togglebutton";
+import Loader from "@/components/loader";
 
 export const getStaticProps = async () => {
   const res = await fetch(
