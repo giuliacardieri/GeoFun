@@ -38,8 +38,8 @@ export default function List({ countries }) {
     <section className={listStyles.list}>
       <ListActionBar getSearchTerm={filterList}></ListActionBar>
       <ul className={listStyles.list__ul}>
-        {countriesSorted?.map((country) => (
-          <li className={listStyles.list__li}>
+        {countriesSorted?.map((country, id) => (
+          <li className={listStyles.list__li} key={id}>
             <Link
               className={listStyles.list__link}
               href={`/countries/${country.cca3}`}

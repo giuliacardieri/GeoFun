@@ -202,7 +202,7 @@ export default function Countries() {
                 <div className={countryPage.country__drawing}>
                   <Un></Un>
                 </div>
-                It's part of the United Nations
+                Part of the United Nations
               </li>
             )}
             <li className={countryPage.country__fact}>

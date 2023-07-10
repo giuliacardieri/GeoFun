@@ -13,13 +13,16 @@ import countryBoxStyles from "@/styles/CountryBox.module.css";
 export default function CountryBox(props) {
   const [activeCountry, setActiveCountry] = useActiveCountryContext(null);
 
-  useEffect(() => {
-    fetch(`https://restcountries.com/v3.1/alpha/${props.country}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setActiveCountry(data[0]);
-      });
-  }, [props.country]);
+  useEffect(
+    (setActiveCountry) => {
+      fetch(`https://restcountries.com/v3.1/alpha/${props.country}`)
+        .then((res) => res.json())
+        .then((data) => {
+          setActiveCountry(data[0]);
+        });
+    },
+    [props.country]
+  );
   if (!activeCountry) return <div></div>;
 
   return (
