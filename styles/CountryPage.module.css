@@ -76,8 +76,11 @@
 .country__iframeGroup {
   border-radius: var(--border-radius);
   height: 360px;
-  margin-bottom: 48px;
   position: relative;
+}
+
+.country__iframeGroup:not(:last-child) {
+  margin-bottom: 48px;
 }
 
 .country__map {
