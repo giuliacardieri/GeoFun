@@ -10,7 +10,7 @@
 .ball__pentagon {
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-  border-top: 14px solid var(--color-black);
+  border-top: 12px solid var(--color-black);
   height: 20px;
   left: 0;
   margin: auto;
@@ -28,7 +28,7 @@
   height: 12px;
   left: -6px;
   position: relative;
-  top: -43px;
+  top: -45px;
   width: 0px;
 }
 

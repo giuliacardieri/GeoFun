@@ -13,6 +13,7 @@ import Loader from "@/components/loader";
 import Area from "@/components/illustrations/area";
 import Currency from "@/components/illustrations/currency";
 import CapitalCity from "@/components/illustrations/capitalcity";
+import Globe from "@/components/illustrations/globe";
 import Independent from "@/components/illustrations/independent";
 import Language from "@/components/illustrations/language";
 import Population from "@/components/illustrations/population";
@@ -23,6 +24,7 @@ import Clock from "@/components/illustrations/clock";
 import Mailbox from "@/components/illustrations/mailbox";
 import Map from "@/components/illustrations/map";
 import Soccer from "@/components/illustrations/soccer";
+import Subregion from "@/components/illustrations/subregion";
 import Un from "@/components/illustrations/un";
 import Website from "@/components/illustrations/website";
 
@@ -88,7 +90,7 @@ export default function Countries() {
           <Image
             className={countryPage.header__flag}
             src={activeCountry?.flags.svg}
-            alt={`Flag from ${activeCountry?.name.common}`}
+            alt={activeCountry?.flags.alt}
             width={200}
             height={128}
           />
@@ -110,7 +112,7 @@ export default function Countries() {
               Area: {formatNumber(activeCountry?.area)}
             </li>
             <li className={countryPage.country__info}>
-              <div></div>
+              <Globe></Globe>
               Region: {activeCountry?.region}
             </li>
             <li className={countryPage.country__info}>
@@ -122,7 +124,7 @@ export default function Countries() {
               Population: {formatNumber(activeCountry?.population)}
             </li>
             <li className={countryPage.country__info}>
-              <div></div>
+              <Subregion></Subregion>
               Sub-region: {activeCountry?.subregion}
             </li>
             <li className={countryPage.country__info}>
@@ -185,15 +187,15 @@ export default function Countries() {
             </li>
             <li className={countryPage.country__fact}>
               <div className={countryPage.country__drawing}>
-                <Website></Website>
-              </div>
-              Websites end with {activeCountry?.tld.join(", ")}
-            </li>
-            <li className={countryPage.country__fact}>
-              <div className={countryPage.country__drawing}>
                 <Mailbox></Mailbox>
               </div>
               Zip code has the {activeCountry?.postalCode?.format} format
+            </li>
+            <li className={countryPage.country__fact}>
+              <div className={countryPage.country__drawing}>
+                <Website></Website>
+              </div>
+              Websites end with {activeCountry?.tld.join(", ")}
             </li>
             {activeCountry?.unMember && (
               <li className={countryPage.country__fact}>
@@ -205,15 +207,19 @@ export default function Countries() {
             )}
             <li className={countryPage.country__fact}>
               <div className={countryPage.country__drawing}>
-                <Soccer></Soccer>
+                <Person
+                  style={{
+                    backgroundImage: `url('${activeCountry?.flags.png}')`,
+                  }}
+                ></Person>
               </div>
-              Its code for FIFA Soccer World Cup is {activeCountry?.fifa}
+              A person who is born there is {activeCountry?.demonyms.eng.m}
             </li>
             <li className={countryPage.country__fact}>
               <div className={countryPage.country__drawing}>
-                <Person></Person>
+                <Soccer></Soccer>
               </div>
-              A person who is born there is {activeCountry?.demonyms.eng.m}
+              Its code for FIFA Soccer World Cup is {activeCountry?.fifa}
             </li>
           </ul>
         </section>

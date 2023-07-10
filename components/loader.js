@@ -11,7 +11,7 @@ export default function Loader(props) {
           : LoaderStyles.loader
       }
     >
-      <Globe></Globe>
+      <Globe animated></Globe>
     </aside>
   );
 }

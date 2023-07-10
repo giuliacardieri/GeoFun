@@ -1,0 +1,30 @@
+.subregion {
+  background-color: var(--color-blue);
+  border: 2px solid var(--color-black);
+  box-sizing: border-box;
+  height: 72px;
+  position: relative;
+  overflow: hidden;
+  width: 96px;
+}
+
+.subregion:before {
+  background-color: var(--color-green);
+  border-radius: 0% 90% 40% 90%;
+  content: "";
+  height: 64px;
+  left: -8px;
+  position: absolute;
+  top: -8px;
+  width: 72px;
+}
+
+.subregion__circle {
+  border: 4px dashed var(--color-red);
+  border-radius: 100%;
+  height: 32px;
+  left: 8px;
+  position: absolute;
+  top: 2px;
+  width: 32px;
+}

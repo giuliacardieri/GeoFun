@@ -1,232 +1,109 @@
 .unitednations {
-  background: radial-gradient(
-    var(--color-white) 10px,
-    var(--color-green-blue) 11px,
-    var(--color-white) 13px,
-    var(--color-white) 20px,
-    var(--color-green-blue) 21px,
-    var(--color-white) 23px,
-    var(--color-white) 28px,
-    var(--color-green-blue) 29px,
-    var(--color-white) 31px
-  );
-  border: 2px solid var(--color-green-blue);
-  border-radius: 100%;
-  box-sizing: border-box;
-  height: 64px;
-  margin-bottom: 8px;
-  margin-left: 10px;
+  height: 72px;
   position: relative;
-  width: 72px;
+  width: 96px;
 }
 
 .unitednations:after {
-  background-color: var(--color-green-blue);
+  background-color: var(--color-white);
+  bottom: -12px;
   content: "";
-  height: 100%;
-  left: 0;
-  margin: auto;
+  height: 12px;
   position: absolute;
-  right: 0;
-  width: 2px;
+  width: 100%;
 }
 
 .unitednations:before {
-  background-color: var(--color-green-blue);
-  bottom: 0;
-  content: "";
-  height: 2px;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.unitednations__line {
-  height: 100%;
-  position: absolute;
-  transform: rotate(45deg);
-  width: 100%;
-}
-
-.unitednations__line:after {
-  background-color: var(--color-green-blue);
-  content: "";
-  height: 100%;
-  left: 0;
-  margin: auto;
-  position: absolute;
-  right: 0;
-  width: 2px;
-}
-
-.unitednations__line:before {
-  background-color: var(--color-green-blue);
-  bottom: 0;
-  content: "";
-  height: 2px;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.unitednations__circle {
-  background: radial-gradient(
-    var(--color-white) 5px,
-    var(--color-green-blue) 6px,
-    var(--color-white) 9px
-  );
-  border: 3px solid var(--color-white);
+  background-color: var(--color-green);
   border-radius: 100%;
-  bottom: 0;
-  box-sizing: border-box;
-  height: 20px;
-  left: 0;
+  bottom: -12px;
+  content: "";
+  height: 24px;
+  position: absolute;
+  width: 100%;
+}
+
+.unitednations__flag {
+  background-color: var(--color-orange-lighter);
+  border-radius: 2px;
+  bottom: 36px;
+  height: 16px;
+  left: 12px;
   margin: auto;
   position: absolute;
   right: 0;
-  top: 0;
-  width: 20px;
+  transform: skew(2deg);
+  width: 24px;
   z-index: 1;
 }
 
-.unitednations__continent1 {
-  background-color: var(--color-green-blue);
-  border-radius: 20% 40% 30% 80%;
-  bottom: 14px;
-  height: 10px;
-  left: 4px;
+.unitednations__flag:after,
+.unitednations__flag2:after,
+.unitednations__flag3:after,
+.unitednations__flag4:after,
+.unitednations__flag5:after {
+  background-color: var(--color-black);
+  border-radius: 100%;
+  bottom: -26px;
+  content: "";
+  display: block;
+  height: 42px;
+  left: 0;
   position: absolute;
-  transform: rotate(30deg);
-  width: 24px;
+  width: 2px;
   z-index: 2;
 }
 
-.unitednations__continent1:after {
-  background-color: var(--color-green-blue);
-  border-radius: 30% 80% 10% 80%;
-  content: "";
+.unitednations__flag2 {
+  background-color: var(--color-blue);
+  border-radius: 2px;
+  bottom: 29px;
   height: 16px;
-  left: 6px;
+  left: -61px;
+  margin: auto;
   position: absolute;
-  top: -6px;
-  transform: rotate(20deg);
-  width: 14px;
-}
-
-.unitednations__continent2 {
-  background-color: var(--color-green-blue);
-  border-radius: 60%;
-  bottom: 30px;
-  height: 12px;
-  left: 13px;
-  position: absolute;
-  width: 20px;
-  z-index: 2;
-}
-
-.unitednations__continent2:after {
-  background-color: var(--color-green-blue);
-  border-radius: 50% 60% 60% 20%;
-  bottom: 3px;
-  content: "";
-  height: 10px;
-  left: 4px;
-  position: absolute;
-  transform: rotate(-40deg);
-  width: 20px;
-}
-
-.unitednations__continent3 {
-  background-color: var(--color-green-blue);
-  border-radius: 60%;
-  bottom: 10px;
-  height: 10px;
-  left: 34px;
-  position: absolute;
+  right: 0;
+  transform: skew(2deg);
   width: 24px;
-  z-index: 2;
 }
 
-.unitednations__continent3:after {
+.unitednations__flag3 {
   background-color: var(--color-green-blue);
-  border-radius: 60%;
-  bottom: -5px;
-  content: "";
-  height: 18px;
-  left: 9px;
-  position: absolute;
-  transform: skew(10deg) rotate(0deg);
-  width: 16px;
-}
-
-.unitednations__continent4 {
-  background-color: var(--color-green-blue);
-  border-radius: 30% 90% 80% 100%;
-  bottom: 26px;
-  height: 24px;
-  left: 44px;
-  position: absolute;
-  width: 18px;
-  z-index: 2;
-}
-
-.unitednations__continent4:after {
-  background-color: var(--color-green-blue);
-  border-radius: 60%;
-  bottom: -2px;
-  content: "";
-  height: 10px;
-  left: -5px;
-  position: absolute;
-  width: 18px;
-}
-
-.unitednations__continent4:before {
-  background-color: var(--color-green-blue);
-  border-radius: 60%;
-  content: "";
+  border-radius: 2px;
+  bottom: 33px;
   height: 16px;
-  left: -10px;
+  left: -28px;
+  margin: auto;
   position: absolute;
-  top: -8px;
-  transform: rotate(-50deg);
-  width: 8px;
-  z-index: 2;
+  right: 0;
+  transform: skew(2deg);
+  width: 24px;
 }
 
-.unitednations__crown {
-  border: 3px dashed var(--color-green-blue);
-  border-width: 0 4px 0px 4px;
-  border-radius: 60%;
-  bottom: -10px;
-  height: 80px;
-  left: -10px;
+.unitednations__flag4 {
+  background-color: var(--color-red);
+  border-radius: 2px;
+  bottom: 34px;
+  height: 16px;
+  left: 51px;
+  margin: auto;
   position: absolute;
-  width: 80px;
+  right: 0;
+  transform: skew(2deg);
+  width: 24px;
+  z-index: 1;
 }
 
-.unitednations__crown:after {
-  border-top: 5px solid var(--color-green-blue);
-  border-radius: 0 100%;
-  bottom: -10px;
-  content: "";
-  height: 10px;
-  left: 16px;
+.unitednations__flag5 {
+  background-color: var(--color-orange);
+  border-radius: 2px;
+  bottom: 31px;
+  height: 16px;
+  left: 78px;
+  margin: auto;
   position: absolute;
-  transform: rotate(10deg);
-  width: 40px;
-}
-
-.unitednations__crown:before {
-  border-top: 5px solid var(--color-green-blue);
-  border-radius: 100% 0;
-  bottom: -10px;
-  content: "";
-  height: 10px;
-  right: 16px;
-  position: absolute;
-  transform: rotate(-10deg);
-  width: 40px;
+  right: 0;
+  transform: skew(2deg);
+  width: 24px;
+  z-index: 1;
 }

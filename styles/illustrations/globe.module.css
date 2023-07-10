@@ -1,10 +1,19 @@
 .globe {
-  animation: rotateEarth 1.5s linear infinite;
   background-color: var(--color-blue);
   border-radius: 100%;
   box-shadow: -4px -4px 0px inset rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  height: 72px;
+  margin: 0 12px;
+  position: relative;
+  width: 72px;
+}
+
+.globe--animated {
+  animation: rotateEarth 1.5s linear infinite;
   height: 64px;
   position: absolute;
+  margin: 0;
   width: 64px;
 }
 
