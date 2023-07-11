@@ -24,6 +24,8 @@
   --header-height: 64px;
 
   --border-radius: 10px;
+
+  --main-padding: 36px;
 }
 
 body {
@@ -53,4 +55,12 @@ h3 {
 
 a {
   color: var(--color-black);
+}
+
+@media (max-width: 1023px) {
+  body {
+    --h1-font-size: 4rem;
+    --h2-font-size: 2rem;
+    --main-padding: 16px;
+  }
 }

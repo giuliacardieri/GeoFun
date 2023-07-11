@@ -177,6 +177,18 @@ export default function Countries() {
             </li>
             <li className={countryPage.country__fact}>
               <div className={countryPage.country__drawing}>
+                <Mailbox></Mailbox>
+              </div>
+              Zip code has the {activeCountry?.postalCode?.format} format
+            </li>
+            <li className={countryPage.country__fact}>
+              <div className={countryPage.country__drawing}>
+                <Soccer></Soccer>
+              </div>
+              Its code for FIFA Soccer World Cup is {activeCountry?.fifa}
+            </li>
+            <li className={countryPage.country__fact}>
+              <div className={countryPage.country__drawing}>
                 <Map></Map>
               </div>
               It has a border with{" "}
@@ -187,9 +199,13 @@ export default function Countries() {
             </li>
             <li className={countryPage.country__fact}>
               <div className={countryPage.country__drawing}>
-                <Mailbox></Mailbox>
+                <Person
+                  style={{
+                    backgroundImage: `url('${activeCountry?.flags.png}')`,
+                  }}
+                ></Person>
               </div>
-              Zip code has the {activeCountry?.postalCode?.format} format
+              A person who is born there is {activeCountry?.demonyms.eng.m}
             </li>
             <li className={countryPage.country__fact}>
               <div className={countryPage.country__drawing}>
@@ -205,22 +221,6 @@ export default function Countries() {
                 Part of the United Nations
               </li>
             )}
-            <li className={countryPage.country__fact}>
-              <div className={countryPage.country__drawing}>
-                <Person
-                  style={{
-                    backgroundImage: `url('${activeCountry?.flags.png}')`,
-                  }}
-                ></Person>
-              </div>
-              A person who is born there is {activeCountry?.demonyms.eng.m}
-            </li>
-            <li className={countryPage.country__fact}>
-              <div className={countryPage.country__drawing}>
-                <Soccer></Soccer>
-              </div>
-              Its code for FIFA Soccer World Cup is {activeCountry?.fifa}
-            </li>
           </ul>
         </section>
         <section className={countryPage.country__iframeGroup}>

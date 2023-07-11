@@ -4,7 +4,7 @@
   display: flex;
   height: var(--header-height);
   justify-content: space-between;
-  padding: 16px 36px 0 36px;
+  padding: 16px var(--main-padding) 0 var(--main-padding);
 }
 
 .header h1 {

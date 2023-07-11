@@ -1,5 +1,5 @@
 .list {
-  padding: 36px;
+  padding: var(--main-padding);
 }
 
 .list__ul {
@@ -44,4 +44,21 @@
 .list__flag {
   border-radius: 8px 0 0 8px;
   object-fit: cover;
+}
+
+@media (max-width: 1023px) {
+  .list__ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .list {
+    --main-padding: 16px;
+  }
+
+  .list__ul {
+    gap: 16px;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
 }

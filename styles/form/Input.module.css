@@ -3,7 +3,7 @@
   height: 56px;
   min-width: 360px;
   position: relative;
-  width: calc(50% - 12px);
+  width: 100%;
 }
 
 .input__label {
@@ -48,4 +48,10 @@
 .input__input:focus,
 .input__input--active {
   padding: 16px 0 8px 48px;
+}
+
+@media (min-width: 1024px) {
+  .input {
+    width: calc(50% - 12px);
+  }
 }

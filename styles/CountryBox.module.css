@@ -7,7 +7,7 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  left: 36px;
+  left: var(--main-padding);
   min-height: 120px;
   min-width: 220px;
   padding: 8px;
