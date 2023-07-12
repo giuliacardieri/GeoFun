@@ -1,6 +1,6 @@
 .toggleButton {
   align-items: center;
-  border: 2px solid var(--color-black);
+  /* border: 2px solid var(--color-black); */
   border-radius: 1em;
   box-shadow: 4px 4px 0px var(--color-black);
   cursor: pointer;
@@ -21,17 +21,18 @@
   transform: translateX(4px) translateY(4px);
 }
 
-.toggleButton[data-is-map="false"] .text {
+.toggleButton[data-is-map="false"] .toggleButton__text {
   left: 12px;
 }
 
 .toggleButton__text {
+  color: var(--color-black);
   left: 45px;
   position: absolute;
   transition: left ease-in-out 300ms;
 }
 
-.toggleButton[data-is-map="false"] .icon {
+.toggleButton[data-is-map="false"] .toggleButton__icon {
   animation: rotateIcon linear 300ms;
   right: 4px;
 }
