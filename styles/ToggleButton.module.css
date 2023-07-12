@@ -1,6 +1,6 @@
 .toggleButton {
   align-items: center;
-  /* border: 2px solid var(--color-black); */
+  border: 2px solid var(--color-black);
   border-radius: 1em;
   box-shadow: 4px 4px 0px var(--color-black);
   cursor: pointer;
