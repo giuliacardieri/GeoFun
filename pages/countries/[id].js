@@ -10,6 +10,7 @@ import countryPage from "@/styles/CountryPage.module.css";
 
 import Button from "@/components/button";
 import Loader from "@/components/loader";
+import GoogleMap from "@/components/googleMap";
 import Area from "@/components/illustrations/area";
 import Currency from "@/components/illustrations/currency";
 import CapitalCity from "@/components/illustrations/capitalcity";
@@ -139,18 +140,8 @@ export default function Countries() {
             </li>
           </ul>
         </section>
-        <section className={countryPage.country__iframeGroup}>
-          <Loader className={countryPage.country__loader}></Loader>
-          <iframe
-            className={countryPage.country__map}
-            width="450"
-            height="250"
-            frameborder="0"
-            referrerpolicy="no-referrer-when-downgrade"
-            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}&q=${activeCountry?.name?.common}&zoom=4`}
-            allowfullscreen
-          ></iframe>
-        </section>
+
+        <GoogleMap query={activeCountry?.name?.common} zoom={4}></GoogleMap>
         <section>
           <h2 className={countryPage.country__h2}>
             Fun Facts about {activeCountry?.flag}
@@ -225,18 +216,11 @@ export default function Countries() {
             )}
           </ul>
         </section>
-        <section className={countryPage.country__iframeGroup}>
-          <Loader className={countryPage.country__loader}></Loader>
-          <iframe
-            className={countryPage.country__map}
-            width="450"
-            height="250"
-            frameborder="0"
-            referrerpolicy="no-referrer-when-downgrade"
-            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}&q=${activeCountry?.capital?.[0]}&zoom=12&maptype=satellite`}
-            allowfullscreen
-          ></iframe>
-        </section>
+        <GoogleMap
+          query={activeCountry?.capital?.[0]}
+          zoom={12}
+          satellite
+        ></GoogleMap>
       </main>
     </>
   );

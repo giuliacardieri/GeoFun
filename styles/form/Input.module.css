@@ -1,5 +1,6 @@
 .input {
   box-sizing: border-box;
+  display: grid;
   height: 56px;
   grid-column-end: 4;
   grid-column-start: 1;
@@ -49,4 +50,10 @@
 .input__input:focus,
 .input__input--active {
   padding: 16px 0 8px 48px;
+}
+
+@media (max-width: 1023px) {
+  .input {
+    grid-column-end: 5;
+  }
 }

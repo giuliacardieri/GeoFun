@@ -67,26 +67,6 @@
   min-width: 96px;
 }
 
-.country__iframeGroup {
-  border-radius: var(--border-radius);
-  height: 360px;
-  position: relative;
-}
-
-.country__iframeGroup:not(:last-child) {
-  margin-bottom: var(--margin-bottom);
-}
-
-.country__map {
-  border: 2px solid var(--color-black);
-  border-radius: var(--border-radius);
-  box-sizing: border-box;
-  height: 100%;
-  position: relative;
-  width: 100%;
-  z-index: 2;
-}
-
 @media (min-width: 1024px) {
   .header__text {
     margin-left: 24px;

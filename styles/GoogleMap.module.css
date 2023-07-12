@@ -1,0 +1,19 @@
+.map {
+  border-radius: var(--border-radius);
+  height: 360px;
+  position: relative;
+}
+
+.map:not(:last-child) {
+  margin-bottom: var(--margin-bottom);
+}
+
+.map__iframe {
+  border: 2px solid var(--color-black);
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
