@@ -11,20 +11,22 @@ export default function List({ countries }) {
   const [countriesSorted, setCountriesSorted] = useState([]);
 
   useEffect(() => {
-    setCountriesSorted(
-      countries.sort(function (a, b) {
-        if (a.name.common > b.name.common) {
-          return 1;
-        }
-        if (a.name.common < b.name.common) {
-          return -1;
-        }
-        return 0;
-      })
-    );
+    setCountriesSorted(sortCountries(countries));
   }, [countries]);
 
-  function filterList(searchTerm) {
+  function sortCountries(countries) {
+    return countries.sort(function (a, b) {
+      if (a.name.common > b.name.common) {
+        return 1;
+      }
+      if (a.name.common < b.name.common) {
+        return -1;
+      }
+      return 0;
+    });
+  }
+
+  function filterCountries(searchTerm) {
     setCountriesSorted(
       countries.filter((country) => {
         return country?.name?.common
@@ -34,9 +36,24 @@ export default function List({ countries }) {
     );
   }
 
+  async function filterRegion(region) {
+    const res = await fetch(
+      `https://restcountries.com/v3.1/region/${region}
+      `
+    );
+    // precisa conversar com o search
+    // talvez guardar esse countriesByRegion num context e ai filtrar o nome dele
+    // só se existir um valor para region
+    const countries = await res.json();
+    setCountriesSorted(sortCountries(countries));
+  }
+
   return (
     <section className={listStyles.list}>
-      <ListActionBar getSearchTerm={filterList}></ListActionBar>
+      <ListActionBar
+        getSearchTerm={filterCountries}
+        //getRegion={filterRegion}
+      ></ListActionBar>
       <ul className={listStyles.list__ul}>
         {countriesSorted?.map((country, id) => (
           <li className={listStyles.list__li} key={id}>

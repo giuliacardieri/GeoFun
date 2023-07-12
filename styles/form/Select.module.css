@@ -1,20 +1,18 @@
-.input {
+.select {
   box-sizing: border-box;
   height: 56px;
-  grid-column-end: 4;
-  grid-column-start: 1;
   position: relative;
   width: 100%;
 }
 
-.input__label {
+.select__label {
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
 }
 
-.input__text {
+.select__text {
   font-size: 1.5em;
   left: 32px;
   line-height: 1;
@@ -24,18 +22,19 @@
   transition: all 0.3s ease-in-out;
 }
 
-.input__input:focus + .input__label > .input__text,
-.input__input--active + .input__label > .input__text {
+.select__select:focus + .select__label > .select__text,
+.select__select--active + .select__label > .select__text {
   font-size: 0.75em;
   top: -4px;
 }
 
-.input__icon {
+.select__icon {
   font-size: 1.5em;
   margin: 16px 8px 16px 16px;
 }
 
-.input__input {
+.select__select {
+  appearance: none;
   background-color: var(--color-white);
   border: 2px solid var(--color-black);
   border-radius: var(--border-radius);
@@ -46,7 +45,14 @@
   width: 100%;
 }
 
-.input__input:focus,
-.input__input--active {
-  padding: 16px 0 8px 48px;
+.select__select:focus,
+.select__select--active {
+  padding: 16px 0 8px 46px;
+}
+
+.select__iconDown {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 24px;
+  top: 15px;
 }

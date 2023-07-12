@@ -15,7 +15,7 @@ export default function Input(props) {
         value={props.value}
         onChange={props.onChange}
       />
-      <label className={inputStyles.input__label} for={props.name}>
+      <label className={inputStyles.input__label} htmlFor={props.name}>
         {props.icon && (
           <FontAwesomeIcon
             className={inputStyles.input__icon}

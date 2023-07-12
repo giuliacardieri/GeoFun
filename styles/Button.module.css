@@ -17,6 +17,8 @@
   transition: all 300ms ease-in-out;
 }
 
+.button:focus,
+.button:active,
 .button:hover {
   box-shadow: 0 0 0;
   transform: translateX(4px) translateY(4px);

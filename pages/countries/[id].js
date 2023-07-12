@@ -164,7 +164,9 @@ export default function Countries() {
             </li>
             <li className={countryPage.country__fact}>
               <div className={countryPage.country__drawing}>
-                <Carside></Carside>
+                <Carside
+                  isLeft={activeCountry?.car.side === "left" ? true : false}
+                ></Carside>
               </div>
               Cars drive on the {activeCountry?.car.side} side
             </li>

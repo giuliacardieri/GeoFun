@@ -19,16 +19,25 @@
   width: 2px;
 }
 
-.carside__arrowUp {
+.carside__arrowUp,
+.carside__arrowDown {
   background-color: var(--color-white);
   height: 40%;
   position: absolute;
-  right: 17px;
   top: 30%;
   width: 2px;
 }
 
-.carside__arrowUp:after {
+.carside__arrowUp {
+  right: 17px;
+}
+
+.carside__arrowDown {
+  left: 17px;
+}
+
+.carside__arrowUp:after,
+.carside__arrowDown:after {
   border-bottom: 8px solid var(--color-white);
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;

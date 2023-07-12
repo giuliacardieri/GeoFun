@@ -23,11 +23,12 @@
   display: flex;
   font-size: var(--h3-font-size);
   line-height: 1;
-  min-width: 192px;
   text-decoration: none;
   transition: all 300ms ease-in-out;
 }
 
+.list__link:active,
+.list__link:focus,
 .list__link:hover {
   box-shadow: 0 0 0;
   transform: translateX(4px) translateY(4px);
